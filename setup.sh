@@ -645,7 +645,7 @@ fi
 #Sudo Required!
 if [ -n "$PASSWD" ]; then
 	pwstatus=0
-	echo "$PASSWD" | sudo -v -S &>/dev/null && pwstatus=1 || echo "sudo password was incorrect" #refresh sudo cache
+	echo '$PASSWD' | sudo -v -S &>/dev/null && pwstatus=1 || echo "sudo password was incorrect" #refresh sudo cache
 	if [ $pwstatus == 1 ]; then
 		if [ "$doInstallGyro" == "true" ]; then
 			Plugins_installSteamDeckGyroDSU
